@@ -7,6 +7,8 @@
 <title>Welcome!!!</title>
 </head>
 <body>
+<a href="studentForm">Show Student Form</a>
+<hr />
 	<h1>Welcome from JSP file</h1>
 	<h2>Model</h2>
 	<hr /> String: ${name}

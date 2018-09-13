@@ -1,12 +1,54 @@
 package com.wellnwill.jm3006.springmvc.model;
 
+import java.util.Arrays;
+
 public class Student {
-	
+
 	private String name;
-	
+
 	private int age;
+
+	private String gender = "Female";
+
+	private String country;
 	
-	private String gender;
+	private String[] courses;
+
+	private boolean graduate;
+	
+	private String comment;
+	
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public boolean isGraduate() {
+		return graduate;
+	}
+
+	public void setGraduate(boolean graduate) {
+		this.graduate = graduate;
+	}
+
+	public String[] getCourses() {
+		return courses;
+	}
+
+	public void setCourses(String[] courses) {
+		this.courses = courses;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
 
 	public Student() {
 	}
@@ -37,9 +79,8 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", age=" + age + ", gender=" + gender + "]";
+		return "Student [name=" + name + ", age=" + age + ", gender=" + gender + ", country=" + country + ", courses="
+				+ Arrays.toString(courses) + ", graduate=" + graduate + ", comment=" + comment + "]";
 	}
-	
-	
 
 }
