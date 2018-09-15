@@ -6,16 +6,38 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Student Form</title>
+<style type="text/css">
+.error-color{
+color: red;
+}
+</style>
 </head>
 <body>
 	<form:form action="processStudentForm" modelAttribute="student">
 		
 		<label>Name</label>
 		<form:input path="name" />
+		<form:errors path="name" cssClass="error-color" />
+		<br />
+		
+		<label>Date of Birth</label>
+		<form:input path="dob" />
+		<form:errors path="dob" cssClass="error-color" />
+		<br />
+		
+		<label>Exam Date</label>
+		<form:input path="examDate" />
+		<form:errors path="examDate" cssClass="error-color" />
+		<br />
+		
+		<label>Batch Code</label>
+		<form:input path="batchCode" />
+		<form:errors path="batchCode" cssClass="error-color" />
 		<br />
 
 		<label>Age</label>
 		<form:input path="age" />
+		<form:errors path="age" cssClass="error-color" />
 		<br />
 
 		<label>Gender</label>
@@ -30,6 +52,7 @@
 		<form:option value="India">IND</form:option>
 		<form:option value="United States">US</form:option>
 		</form:select>
+		<form:errors path="country" cssClass="error-color" />
 		<br />
 		
 		<label>Course</label>
@@ -44,6 +67,7 @@
 		
 		<label>Comment</label>
 		<form:textarea path="comment" cols="100" rows="5"/>
+		<form:errors path="comment" cssClass="error-color" />
 		<br />
 		
 		<br />
