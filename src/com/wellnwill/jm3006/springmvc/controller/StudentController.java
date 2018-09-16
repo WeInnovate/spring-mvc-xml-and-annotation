@@ -30,6 +30,7 @@ public class StudentController {
 
 	@RequestMapping("/processStudentForm")
 	public String processStudentForm(@Valid @ModelAttribute("student") Student std, BindingResult bindingResult) {
+//		int i = 10/0;
 		if (bindingResult.hasErrors()) {
 			return "student-form";
 		}
